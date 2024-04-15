@@ -5,6 +5,10 @@ Autor: Edival Mittelstad
 ## Compilação
 cargo build --release
 
+## Compilação Estatica
+rustup target add x86_64-unknown-linux-musl
+cargo build --release --target=x86_64-unknown-linux-musl
+
 ### Opções 
     -S                  Inicializa como servidor
     -i IP               IP do servidor para conectar
