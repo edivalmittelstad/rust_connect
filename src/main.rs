@@ -16,11 +16,11 @@ fn main() {
 
   let mut opts = Options::new();
   opts.optflag("S", "", "Inicializa como servidor");
-  opts.optopt("i", "", "IP do servidor para conectar", "IP");
+  opts.optopt("i", "", "IP do servidor para conectar - (Cliente)", "IP");
   opts.optopt("p", "", "Porta de conexão", "PORTA");
-  opts.optflag("e", "", "Exibir Latencia");
-  opts.optflag("g", "", "Gravar Latencia");
-  opts.optopt("t", "", "Intervalo de teste em segundos (Padrão 3)", "SEGUNDOS");
+  opts.optflag("e", "", "Exibir Latencia - (Cliente)");
+  opts.optflag("g", "", "Gravar Latencia - (Cliente)");
+  opts.optopt("t", "", "Intervalo de teste em segundos (Padrão 3) - (Cliente)", "SEGUNDOS");
   opts.optflag("", "help", "Exibe esta mensagem de ajuda");
 
   let matches = match opts.parse(&args[1..]) {

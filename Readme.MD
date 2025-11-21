@@ -5,9 +5,14 @@ Autor: Edival Mittelstad
 ## Compilação
 cargo build --release
 
-## Compilação Estatica
+## Compilação Estatica Linux
 rustup target add x86_64-unknown-linux-musl
 cargo build --release --target=x86_64-unknown-linux-musl
+
+## Compilação para Windows
+rustup target add x86_64-pc-windows-gnu
+cargo build --target x86_64-pc-windows-gnu
+cargo build --release --target x86_64-pc-windows-gnu
 
 ### Opções 
     -S                  Inicializa como servidor
